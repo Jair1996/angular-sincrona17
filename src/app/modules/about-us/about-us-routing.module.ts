@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MisionComponent } from './components/mision/mision.component';
+import { VisionComponent } from './components/vision/vision.component';
 import { AboutUsPageComponent } from './pages/about-us-page/about-us-page.component';
 
 const routes: Routes = [
@@ -9,6 +11,16 @@ const routes: Routes = [
       {
         path: '',
         component: AboutUsPageComponent,
+        children: [
+          {
+            path: 'mision',
+            component: MisionComponent,
+          },
+          {
+            path: 'vision',
+            component: VisionComponent,
+          },
+        ],
       },
     ],
   },
@@ -16,6 +28,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AboutUsRoutingModule { }
+export class AboutUsRoutingModule {}

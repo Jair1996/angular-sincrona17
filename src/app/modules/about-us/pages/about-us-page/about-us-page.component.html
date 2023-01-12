@@ -1,1 +1,21 @@
-<p>about-us-page works!</p>
+<section class="mb-5">
+  <section class="mt-5">
+    <app-about-us></app-about-us>
+    <div class="my-5">
+      <p class="fs-2 text-center m-0">Misión y Visión</p>
+    </div>
+    <div>
+      <div class="btn-group">
+        <a routerLink="mision" routerLinkActive="active" class="btn btn-primary"
+          >Misión</a
+        >
+        <a routerLink="vision" routerLinkActive="active" class="btn btn-primary"
+          >Visión</a
+        >
+      </div>
+    </div>
+    <div class="mt-5">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+</section>
